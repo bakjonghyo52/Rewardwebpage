@@ -1,0 +1,28 @@
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <button id="sidebar-toggle" class="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                <i data-lucide="menu" class="w-5 h-5"></i>
+            </button>
+            <h1 class="text-blue-600 font-bold text-lg">리워드 플랫폼</h1>
+        </div>
+
+        <div class="flex items-center gap-2 bg-gray-100 rounded-lg p-1">
+            <a href="{{ url_for('user_dashboard') }}"
+                class="px-4 py-2 rounded-md flex items-center gap-2 transition-colors {{ 'bg-white shadow-sm' if page == 'user' else 'hover:bg-gray-200' }}">
+                <i data-lucide="user" class="w-4 h-4"></i>
+                <span>사용자</span>
+            </a>
+            <a href="{{ url_for('company_dashboard') }}"
+                class="px-4 py-2 rounded-md flex items-center gap-2 transition-colors {{ 'bg-white shadow-sm' if page == 'company' else 'hover:bg-gray-200' }}">
+                <i data-lucide="building-2" class="w-4 h-4"></i>
+                <span>기업</span>
+            </a>
+            <a href="{{ url_for('admin_dashboard') }}"
+                class="px-4 py-2 rounded-md flex items-center gap-2 transition-colors {{ 'bg-white shadow-sm' if page == 'admin' else 'hover:bg-gray-200' }}">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                <span>관리자</span>
+            </a>
+        </div>
+    </div>
+</header>
